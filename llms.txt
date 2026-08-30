@@ -1,0 +1,13 @@
+# Ruah
+
+> Ruah (רוּחַ — Hebrew for "breath", "wind", or "spirit") is a Christian spiritual companion app for Android: daily Bible verses, an AI companion named Elihu, a prayer journal, and community chat rooms with invite-code-based access.
+
+Ruah is free to download, with an optional Premium subscription (€4.99/month, Android only). Developed in Germany. The app interface and this site are available in English and German.
+
+## Pages
+
+- [Home](https://ruah.vercel.app/): App overview, features, and download
+- [Privacy Policy](https://ruah.vercel.app/privacy.html): How user data is collected, stored, and protected (GDPR)
+- [Terms of Service](https://ruah.vercel.app/terms.html): Rules for using the app
+- [Legal Notice](https://ruah.vercel.app/imprint.html): Legal notice per German law (§5 TMG, § 18 Abs. 2 MStV)
+- [Account Deletion](https://ruah.vercel.app/account-deletion.html): How to delete an account and its data
