@@ -1350,3 +1350,52 @@ ul { list-style: none; }
   .legal-content h2 { page-break-after: avoid; }
   body { font-size: 11pt; color: #000; background: #fff; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   ENHANCED MOTION — parallax depth, 3D card tilt, micro-interactions
+   Added 30.08.2026
+   ═══════════════════════════════════════════════════════ */
+
+/* -- 3D tilt support for feature cards -- */
+.fc { will-change: transform; }
+.fc-icon { transition: transform .35s var(--ease); }
+.fc:hover .fc-icon { transform: scale(1.15) rotate(-6deg); }
+
+/* -- Button shine-sweep + tactile press -- */
+.btn { position: relative; overflow: hidden; }
+.btn::before {
+  content: '';
+  position: absolute; top: 0; left: -60%;
+  width: 40%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: skewX(-20deg);
+  transition: left .65s ease;
+  pointer-events: none;
+}
+.btn:hover::before { left: 130%; }
+.btn--ghost::before { background: linear-gradient(120deg, transparent, rgba(184,146,42,.18), transparent); }
+.btn--primary:hover, .btn--gold:hover, .btn--ghost:hover { transform: translateY(-2px) scale(1.015); }
+.btn:active { transform: scale(.965) !important; transition-duration: .1s; }
+
+/* -- Nav logo -- */
+.nav-logo { transition: transform .3s var(--ease); display: inline-flex; }
+.nav-logo:hover { transform: scale(1.045); }
+
+/* -- Parallax-ready decorative layers -- */
+.hero-chars, .elihu-orb-light, .dl-orb, .legal-hero-orb {
+  will-change: transform;
+  transition: transform .05s linear;
+}
+
+/* Respect reduced-motion preference for all of the above */
+@media (prefers-reduced-motion: reduce) {
+  .fc:hover .fc-icon,
+  .btn::before,
+  .btn--primary:hover, .btn--gold:hover, .btn--ghost:hover,
+  .nav-logo:hover,
+  .hero-chars, .elihu-orb-light, .dl-orb, .legal-hero-orb {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

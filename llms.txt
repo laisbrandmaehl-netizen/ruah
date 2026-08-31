@@ -6,8 +6,8 @@ Ruah is free to download, with an optional Premium subscription (€4.99/month, 
 
 ## Pages
 
-- [Home](https://ruah.vercel.app/): App overview, features, and download
-- [Privacy Policy](https://ruah.vercel.app/privacy.html): How user data is collected, stored, and protected (GDPR)
-- [Terms of Service](https://ruah.vercel.app/terms.html): Rules for using the app
-- [Legal Notice](https://ruah.vercel.app/imprint.html): Legal notice per German law (§5 TMG, § 18 Abs. 2 MStV)
-- [Account Deletion](https://ruah.vercel.app/account-deletion.html): How to delete an account and its data
+- [Home](https://getruah.vercel.app/): App overview, features, and download
+- [Privacy Policy](https://getruah.vercel.app/privacy.html): How user data is collected, stored, and protected (GDPR)
+- [Terms of Service](https://getruah.vercel.app/terms.html): Rules for using the app
+- [Legal Notice](https://getruah.vercel.app/imprint.html): Legal notice per German law (§5 TMG, § 18 Abs. 2 MStV)
+- [Account Deletion](https://getruah.vercel.app/account-deletion.html): How to delete an account and its data

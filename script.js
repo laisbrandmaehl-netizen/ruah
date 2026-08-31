@@ -407,18 +407,80 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ── HERO PARALLAX ORBS ───────────────────────────────── */
+/* ── HERO PARALLAX ORBS (mouse + scroll combined) ─────── */
 const orbs = document.querySelectorAll('.hero-orb-1, .hero-orb-2');
+let mx = 0, my = 0, orbSy = 0; // mouse offset + scroll offset, shared
+const applyOrbTransform = () => {
+  orbs.forEach((o, i) => {
+    const f = i ? 12 : 20;
+    o.style.transform = `translate(${mx*f}px,${my*f + orbSy}px)`;
+  });
+};
 if (orbs.length) {
-  let raf = null, tx = 0, ty = 0;
+  let raf = null;
   document.addEventListener('mousemove', e => {
-    tx = (e.clientX - window.innerWidth  / 2) / window.innerWidth;
-    ty = (e.clientY - window.innerHeight / 2) / window.innerHeight;
-    if (!raf) raf = requestAnimationFrame(() => {
-      orbs.forEach((o, i) => { const f = i ? 12 : 20; o.style.transform = `translate(${tx*f}px,${ty*f}px)`; });
-      raf = null;
-    });
+    mx = (e.clientX - window.innerWidth  / 2) / window.innerWidth;
+    my = (e.clientY - window.innerHeight / 2) / window.innerHeight;
+    if (!raf) raf = requestAnimationFrame(() => { applyOrbTransform(); raf = null; });
   }, { passive: true });
+}
+
+/* ── SCROLL PARALLAX DEPTH ────────────────────────────── */
+// Background layers drift slower/faster than the page to fake depth.
+// Skipped entirely for prefers-reduced-motion.
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion) {
+  const parallaxLayers = [
+    ...Array.from(orbs).map((el, i) => ({ el, rate: i ? -0.10 : -0.16, isHeroOrb: true })),
+    ...Array.from(document.querySelectorAll('.hero-chars')).map(el => ({ el, rate: -0.06 })),
+    ...Array.from(document.querySelectorAll('.elihu-orb-light, .dl-orb, .legal-hero-orb')).map(el => ({ el, rate: 0.08 })),
+  ];
+  if (parallaxLayers.length) {
+    let pRaf = null;
+    const updateParallax = () => {
+      const vh = window.innerHeight;
+      parallaxLayers.forEach(({ el, rate, isHeroOrb }) => {
+        const rect = el.getBoundingClientRect();
+        const centerOffset = (rect.top + rect.height / 2) - vh / 2;
+        const sy = centerOffset * rate;
+        if (isHeroOrb) {
+          orbSy = sy; // last orb in the loop wins, both use the same viewport-relative math anyway
+        } else {
+          el.style.transform = `translateY(${sy}px)`;
+        }
+      });
+      if (orbs.length) applyOrbTransform();
+      pRaf = null;
+    };
+    window.addEventListener('scroll', () => { if (!pRaf) pRaf = requestAnimationFrame(updateParallax); }, { passive: true });
+    window.addEventListener('resize', () => { if (!pRaf) pRaf = requestAnimationFrame(updateParallax); }, { passive: true });
+    updateParallax();
+  }
+}
+
+/* ── 3D CARD TILT (feature cards) ─────────────────────── */
+// Desktop/mouse only — pointer:coarse (touch) devices get the plain CSS hover instead.
+if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.fc').forEach(card => {
+    let tRaf = null;
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width;  // 0–1 across the card
+      const py = (e.clientY - r.top)  / r.height;
+      const rx = (0.5 - py) * 10;  // deg
+      const ry = (px - 0.5) * 12;  // deg
+      if (!tRaf) tRaf = requestAnimationFrame(() => {
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px) scale(1.015)`;
+        tRaf = null;
+      });
+    }, { passive: true });
+    card.addEventListener('mouseleave', () => {
+      card.style.transition = 'transform .5s var(--ease)';
+      card.style.transform = '';
+      setTimeout(() => { card.style.transition = ''; }, 500);
+    });
+    card.addEventListener('mouseenter', () => { card.style.transition = 'transform .15s linear'; });
+  });
 }
 
 /* ── GOLD CURSOR TRAIL ────────────────────────────────── */
