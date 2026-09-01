@@ -2,7 +2,7 @@
 
 > Ruah (רוּחַ — Hebrew for "breath", "wind", or "spirit") is a Christian spiritual companion app for Android: daily Bible verses, an AI companion named Elihu, a prayer journal, and community chat rooms with invite-code-based access.
 
-Ruah is free to download, with an optional Premium subscription (€4.99/month, Android only). Developed in Germany. The app interface and this site are available in English and German.
+Ruah is free to download, with an optional Premium subscription (€5.99/month, Android only). Developed in Germany. The app interface and this site are available in English and German.
 
 ## Pages
 
