@@ -859,6 +859,31 @@ ul { list-style: none; }
   line-height: 1.7;
   max-width: 260px;
 }
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-20);
+  color: var(--ink-45);
+  transition: color .2s, border-color .2s, transform .2s var(--ease);
+}
+.footer-social a:hover {
+  color: var(--gold-dk);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+}
 .footer-col h4 {
   font-family: 'Lora', serif;
   font-size: .7rem;
@@ -1324,7 +1349,14 @@ ul { list-style: none; }
   .imprint-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .lang-toggle { display: none; }
+  /* FIX (17.09.2026): .lang-toggle war komplett display:none auf Mobile —
+     auf dem Handy unsichtbar, obwohl auf Desktop vorhanden. Jetzt sichtbar,
+     aber Nav kompakter gemacht (kleinerer gap + kleinere Buttons), sonst
+     überläuft die Zeile auf schmalen Screens und der Toggle wird nach
+     rechts aus dem sichtbaren Bereich gedrückt. */
+  .nav-links { gap: .5rem; }
+  .lang-btn { padding: .3rem .5rem; font-size: .68rem; }
+  .nav-links a.nav-cta { padding: .38rem .8rem !important; font-size: .74rem !important; }
   .features-grid { grid-template-columns: 1fr; }
   .fc--wide { grid-column: span 1; }
   .nav-links a:not(.nav-cta) { display: none; }
