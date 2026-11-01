@@ -100,7 +100,11 @@
       <a href="#features" class="btn btn--ghost" data-i18n="hero.cta2">Explore Features</a>
     </div>
   </div>
-  <div class="scroll-cue" aria-hidden="true"><div class="scroll-line"></div></div>
+  <div class="hero-stage">
+    <figure class="phone phone--side phone--l"><img data-shot="elihu" src="img/elihu-en.webp" width="440" height="931" alt="Elihu, the AI companion, greeting you in the chat" decoding="async"></figure>
+    <figure class="phone phone--main"><img data-shot="verse" src="img/verse-en.webp" width="440" height="931" alt="Ruah home screen with the verse of the day, a reflection and the daily journey" fetchpriority="high" decoding="async"></figure>
+    <figure class="phone phone--side phone--r"><img data-shot="journal" src="img/journal-en.webp" width="440" height="931" alt="Prayer journal with a field to write down a prayer" decoding="async"></figure>
+  </div>
 </section>
 
 <!-- MEANING -->
@@ -139,38 +143,38 @@
       <h2 class="display display--center" data-a="up" data-i18n="features.title">A sanctuary in your pocket</h2>
     </div>
     <div class="features-grid">
-      <div class="fc fc--wide" data-a="up" data-d="0">
-        <span class="fc-icon">📖</span>
+      <div class="fc" data-a="up" data-d="0">
+        <div class="fc-shot" aria-hidden="true"><img data-shot="verse" src="img/verse-en.webp" width="440" height="931" alt="" loading="lazy" decoding="async" style="object-position:50% 0%"></div>
         <h3 class="fc-title" data-i18n="fc1.title">Daily Verse &amp; Reflection</h3>
         <p class="fc-body" data-i18n="fc1.body">Every morning a carefully chosen verse — with an AI-generated personal reflection. The complete Bible offline in German (Schlachter 2000) and English (KJV). Highlight verses in 8 colors.</p>
         <span class="fc-tag" data-i18n="fc1.tag">Daily · DE + EN · Offline</span>
       </div>
       <div class="fc" data-a="up" data-d="1">
-        <span class="fc-icon">🕊️</span>
+        <div class="fc-shot" aria-hidden="true"><img data-shot="elihu" src="img/elihu-en.webp" width="440" height="931" alt="" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
         <h3 class="fc-title">Elihu</h3>
         <p class="fc-body" data-i18n="fc2.body">Your AI companion — wise, direct, grounded in Job 32–37. Not a chatbot. A fellow traveler in faith.</p>
         <span class="fc-tag" data-i18n="fc2.tag">AI · EU AI Act</span>
       </div>
       <div class="fc" data-a="up" data-d="2">
-        <span class="fc-icon">🙏</span>
+        <div class="fc-shot" aria-hidden="true"><img data-shot="journal" src="img/journal-en.webp" width="440" height="931" alt="" loading="lazy" decoding="async" style="object-position:50% 0%"></div>
         <h3 class="fc-title" data-i18n="fc3.title">Prayer Journal</h3>
         <p class="fc-body" data-i18n="fc3.body">Write your prayers down. Read them again. See how God carries you — line by line, day by day.</p>
         <span class="fc-tag" data-i18n="fc3.tag">Private · Personal</span>
       </div>
       <div class="fc" data-a="up" data-d="3">
-        <span class="fc-icon">🔥</span>
+        <div class="fc-shot" aria-hidden="true"><img data-shot="verse" src="img/verse-en.webp" width="440" height="931" alt="" loading="lazy" decoding="async" style="object-position:50% 88%"></div>
         <h3 class="fc-title" data-i18n="fc4.title">Streak &amp; Journey</h3>
         <p class="fc-body" data-i18n="fc4.body">A small faithfulness every day. Your streak shows you how consistently you stay on the path.</p>
         <span class="fc-tag" data-i18n="fc4.tag">Daily · Motivation</span>
       </div>
       <div class="fc" data-a="up" data-d="4">
-        <span class="fc-icon">👥</span>
+        <div class="fc-shot" aria-hidden="true"><img data-shot="community" src="img/community-en.webp" width="440" height="931" alt="" loading="lazy" decoding="async" style="object-position:50% 0%"></div>
         <h3 class="fc-title" data-i18n="fc5.title">Community</h3>
         <p class="fc-body" data-i18n="fc5.body">Chat rooms on topics of faith. Meet others walking the same path — in real time.</p>
         <span class="fc-tag" data-i18n="fc5.tag">Realtime · Moderated</span>
       </div>
       <div class="fc fc--warm" data-a="up" data-d="5">
-        <span class="fc-icon">📚</span>
+        <div class="fc-shot" aria-hidden="true"><img data-shot="bible" src="img/bible-en.webp" width="440" height="931" alt="" loading="lazy" decoding="async" style="object-position:50% 6%"></div>
         <h3 class="fc-title" data-i18n="fc6.title">Bible Offline</h3>
         <p class="fc-body" data-i18n="fc6.body">66 books, fully offline. Personal notes and up to 8 highlight colors for your study.</p>
         <span class="fc-tag" data-i18n="fc6.tag">Offline · Schlachter + KJV</span>
@@ -248,7 +252,7 @@
         <div class="pc-badge">Premium</div>
         <h3>€5.99<span class="price-mo" data-i18n="premium.mo"> / month</span></h3>
         <ul>
-          <li><span class="ck ck--gold">✦</span> <span data-i18n="pp1">Elihu without daily limit</span></li>
+          <li><span class="ck ck--gold">✦</span> <span data-i18n="pp1">Up to 100 Elihu messages per day</span></li>
           <li><span class="ck ck--gold">✦</span> <span data-i18n="pp2">Unlimited prayers</span></li>
           <li><span class="ck ck--gold">✦</span> <span data-i18n="pp3">8 Bible highlight colors</span></li>
           <li><span class="ck ck--gold">✦</span> <span data-i18n="pp4">Create up to 3 own rooms</span></li>
@@ -311,12 +315,8 @@
         <a href="#download">Coming Soon</a>
       </div>
       <div class="footer-col footer-contact">
-        <h4 data-i18n="footer.legal">Legal &amp; Contact</h4>
-        <a href="imprint.html" data-i18n="footer.imprint">Legal Notice</a>
-        <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
-        <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
-        <a href="account-deletion.html" data-i18n="footer.deleteAccount">Delete Account</a>
-        <p style="margin-top:.8rem"><a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
+        <h4 data-i18n="footer.legal">Contact</h4>
+        <p><a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
       </div>
     </div>
     <div class="footer-bottom">

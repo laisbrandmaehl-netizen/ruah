@@ -13,12 +13,17 @@
 /* ── TRANSLATIONS ─────────────────────────────────────── */
 const T = {
   en: {
+    'alt.verse':      'Ruah home screen with the verse of the day, a reflection and the daily journey',
+    'alt.elihu':      'Elihu, the AI companion, greeting you in the chat',
+    'alt.journal':    'Prayer journal with a field to write down a prayer',
+    'alt.community':  'Community rooms on topics of faith',
+    'alt.bible':      'Bible reader with highlighted verses',
     'nav.features':   'Features',
     'nav.cta':        'Get the App',
     'hero.eyebrow':   'A Christian Companion App for Android',
     'hero.t1': 'Breath', 'hero.t2': 'Wind', 'hero.t3': 'Spirit',
     'hero.sub':       'Your daily companion in faith — daily verse, AI companion Elihu, prayer journal and community.',
-    'hero.cta1':      'Download Now',
+    'hero.cta1':      'Coming Soon',
     'hero.cta2':      'Explore Features',
     'meaning.label':  'About the Name',
     'meaning.title':  'The word that carries<br>breath, wind and spirit',
@@ -64,7 +69,7 @@ const T = {
     'pf4': 'Prayer journal (up to 5 prayers)',
     'pf5': 'Community chat rooms',
     'pf6': '4 Bible highlight colors',
-    'pp1': 'Elihu without daily limit',
+    'pp1': 'Up to 100 Elihu messages per day',
     'pp2': 'Unlimited prayers',
     'pp3': '8 Bible highlight colors',
     'pp4': 'Create up to 3 own rooms',
@@ -79,7 +84,7 @@ const T = {
     'footer.desc':   'A Christian companion app for the daily walk of faith — made with ❤ in Germany.',
     'footer.app':    'App',
     'footer.elihu':  'Elihu — AI Companion',
-    'footer.legal':  'Legal & Contact',
+    'footer.legal':  'Contact',
     'footer.imprint':'Legal Notice',
     'footer.privacy':'Privacy Policy',
     'footer.terms':  'Terms of Service',
@@ -87,12 +92,17 @@ const T = {
     'footer.rights': 'All rights reserved',
   },
   de: {
+    'alt.verse':      'Ruah-Startseite mit Tagesvers, Motivation des Tages und der täglichen Reise',
+    'alt.elihu':      'Elihu, der KI-Begleiter, begrüßt dich im Chat',
+    'alt.journal':    'Gebetsjournal mit einem Feld zum Aufschreiben deines Gebets',
+    'alt.community':  'Community-Räume zu Themen des Glaubens',
+    'alt.bible':      'Bibelleser mit farbig markierten Versen',
     'nav.features':   'Features',
     'nav.cta':        'App laden',
     'hero.eyebrow':   'Eine christliche Companion-App für Android',
     'hero.t1': 'Atem', 'hero.t2': 'Wind', 'hero.t3': 'Geist',
     'hero.sub':       'Dein täglicher Begleiter im Glauben — Tagesvers, KI-Begleiter Elihu, Gebetsjournal und Gemeinschaft.',
-    'hero.cta1':      'Jetzt herunterladen',
+    'hero.cta1':      'Bald verfügbar',
     'hero.cta2':      'Features entdecken',
     'meaning.label':  'Über den Namen',
     'meaning.title':  'Das Wort, das Atem,<br>Wind und Geist trägt',
@@ -138,7 +148,7 @@ const T = {
     'pf4': 'Gebetsjournal (bis 5 Gebete)',
     'pf5': 'Community Chaträume',
     'pf6': '4 Bibelmarkierungsfarben',
-    'pp1': 'Elihu ohne Tageslimit',
+    'pp1': 'Bis zu 100 Elihu-Nachrichten pro Tag',
     'pp2': 'Unbegrenzte Gebete',
     'pp3': '8 Bibelmarkierungsfarben',
     'pp4': 'Bis zu 3 eigene Räume erstellen',
@@ -153,7 +163,7 @@ const T = {
     'footer.desc':   'Eine christliche Companion-App für den täglichen Glaubensweg — entwickelt mit ❤ in Deutschland.',
     'footer.app':    'App',
     'footer.elihu':  'Elihu — KI-Begleiter',
-    'footer.legal':  'Rechtliches & Kontakt',
+    'footer.legal':  'Kontakt',
     'footer.imprint':'Impressum',
     'footer.privacy':'Datenschutzerklärung',
     'footer.terms':  'Nutzungsbedingungen',
@@ -180,6 +190,14 @@ function applyLang(lang) {
     } else {
       el.textContent = val;
     }
+  });
+
+  // App-Screenshots in der gewählten Sprache zeigen
+  document.querySelectorAll('img[data-shot]').forEach(img => {
+    const shot = img.dataset.shot;
+    const next = 'img/' + shot + '-' + lang + '.webp';
+    if (img.getAttribute('src') !== next) img.setAttribute('src', next);
+    if (img.getAttribute('alt') !== '') img.setAttribute('alt', T[lang]['alt.' + shot] || '');
   });
 
   // Update lang toggle buttons
