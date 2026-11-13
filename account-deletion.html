@@ -9,9 +9,9 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#FAF6EE">
   <title>Konto löschen · Ruah</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lora-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
   <div class="container--narrow">
     <span class="legal-icon" aria-hidden="true">🗑️</span>
     <h1 class="legal-title">Konto löschen<br><span style="color:var(--ink-45);font-size:.62em;font-weight:300">Delete Account</span></h1>
-    <p class="legal-sub">Zuletzt aktualisiert · Last updated: Juni 2026</p>
+    <p class="legal-sub">Zuletzt aktualisiert · Last updated: November 2026</p>
     <div class="lang-switch" role="navigation" aria-label="Sprachauswahl">
       <a href="#" data-target="de" class="active" aria-current="true">🇩🇪 Deutsch</a>
       <a href="#" data-target="en">🇬🇧 English</a>
@@ -78,8 +78,10 @@
           <li>Gebete im Gebetsjournal</li>
           <li>Bibel-Notizen und Markierungen</li>
           <li>Elihu-Gesprächsverläufe</li>
+          <li>Deine Liste blockierter Nutzer</li>
           <li>Community-Nachrichten und Chatraum-Beiträge</li>
           <li>Streak- und Nutzungsdaten</li>
+          <li>Fehlerprotokolle und von dir eingereichte Fehlermeldungen (inkl. Screenshots)</li>
         </ul>
 
         <h2>Bearbeitungszeit</h2>
@@ -119,8 +121,10 @@
             <li>Prayer journal entries</li>
             <li>Bible notes and highlights</li>
             <li>Elihu conversation history</li>
+          <li>Your list of blocked users</li>
             <li>Community messages and chat room posts</li>
             <li>Streak and usage data</li>
+          <li>Error logs and problem reports you submitted (incl. screenshots)</li>
           </ul>
 
           <h2>Processing time</h2>
@@ -153,15 +157,12 @@
         <a href="index.html#features">Features</a>
         <a href="index.html#elihu">Elihu</a>
         <a href="index.html#premium">Premium</a>
-        <a href="https://play.google.com/store/apps/details?id=com.laisbrandmaehl.ruah" target="_blank" rel="noopener">Google Play ↗</a>
+        <a href="index.html#download">Coming Soon</a>
       </div>
       <div class="footer-col footer-contact">
-        <h4>Rechtliches &amp; Kontakt</h4>
-        <a href="imprint.html">Impressum</a>
-        <a href="privacy.html">Datenschutzerklärung</a>
-        <a href="terms.html">Nutzungsbedingungen</a>
+        <h4>Kontakt</h4>
+        <p><a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
         <a href="account-deletion.html">Konto löschen</a>
-        <p style="margin-top:.8rem"><a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
       </div>
     </div>
     <div class="footer-bottom">

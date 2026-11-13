@@ -1520,3 +1520,12 @@ ul { list-style: none; }
   .phone, .phone--main, .phone--l, .phone--r { animation: none !important; transition: none !important; }
   .hero-stage .phone:hover { transform: none; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   v7 — Lesbarkeit (Kontraste nach WCAG AA, mind. 4,5:1)
+   Added 02.11.2026
+   ═══════════════════════════════════════════════════════ */
+:root { --ink-45: rgba(26, 17, 10, .66); }   /* war .45 (ca. 3:1) -> jetzt ca. 5:1 auf Creme */
+.label, .hero-eyebrow { color: var(--gold-dk); }  /* Gold #B8922A auf Creme nur 2,7:1, Gold-dk 4,6:1 */
+#download .label, #download .hero-eyebrow { color: var(--gold); }  /* auf dunklem Grund bleibt das helle Gold */
+.btn--gold { color: var(--ink); }                 /* Creme auf Gold nur 2,9:1, Dunkel auf Gold ca. 6,5:1 */

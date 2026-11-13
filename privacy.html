@@ -9,9 +9,9 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#FAF6EE">
   <title>Datenschutzerklärung · Ruah</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lora-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
   <div class="container--narrow">
     <span class="legal-icon" aria-hidden="true">🔒</span>
     <h1 class="legal-title">Datenschutzerklärung<br><span style="color:var(--ink-45);font-size:.62em;font-weight:300">Privacy Policy</span></h1>
-    <p class="legal-sub">Zuletzt aktualisiert · Last updated: Mai 2026</p>
+    <p class="legal-sub">Zuletzt aktualisiert · Last updated: November 2026</p>
     <div class="lang-switch" role="navigation" aria-label="Sprachauswahl">
       <a href="#" data-target="de" class="active" aria-current="true">🇩🇪 Deutsch</a>
       <a href="#" data-target="en">🇬🇧 English</a>
@@ -49,236 +49,357 @@
   <div class="container">
     <div class="legal-layout">
 
-      <aside class="legal-toc" aria-label="Inhaltsverzeichnis">
+<aside class="legal-toc" aria-label="Inhaltsverzeichnis">
         <span class="toc-label">Deutsch</span>
         <a href="#de-1">1. Verantwortliche Stelle</a>
-        <a href="#de-2">2. Erhobene Daten</a>
-        <a href="#de-3">3. Zweck</a>
-        <a href="#de-4">4. Drittanbieter</a>
-        <a href="#de-5">5. Speicherung &amp; Löschung</a>
-        <a href="#de-6">6. Deine Rechte</a>
-        <a href="#de-7">7. Sicherheit</a>
-        <a href="#de-8">8. Kinder</a>
-        <a href="#de-9">9. Änderungen</a>
+        <a href="#de-2">2. Verarbeitete Daten</a>
+        <a href="#de-3">3. Zwecke &amp; Rechtsgrundlagen</a>
+        <a href="#de-4">4. KI (Elihu)</a>
+        <a href="#de-5">5. Dienstleister</a>
+        <a href="#de-6">6. Speicherung &amp; Löschung</a>
+        <a href="#de-7">7. Deine Rechte</a>
+        <a href="#de-8">8. Sicherheit</a>
+        <a href="#de-9">9. Mindestalter</a>
+        <a href="#de-10">10. Änderungen</a>
         <div class="toc-section">
           <span class="toc-label">English</span>
           <a href="#en-1">1. Controller</a>
-          <a href="#en-2">2. Data We Collect</a>
-          <a href="#en-3">3. Purpose</a>
-          <a href="#en-4">4. Third Parties</a>
-          <a href="#en-5">5. Retention &amp; Deletion</a>
-          <a href="#en-6">6. Your Rights</a>
-          <a href="#en-7">7. Security</a>
-          <a href="#en-8">8. Children</a>
-          <a href="#en-9">9. Changes</a>
+          <a href="#en-2">2. Data We Process</a>
+          <a href="#en-3">3. Purposes &amp; Legal Bases</a>
+          <a href="#en-4">4. AI (Elihu)</a>
+          <a href="#en-5">5. Service Providers</a>
+          <a href="#en-6">6. Retention &amp; Deletion</a>
+          <a href="#en-7">7. Your Rights</a>
+          <a href="#en-8">8. Security</a>
+          <a href="#en-9">9. Minimum Age</a>
+          <a href="#en-10">10. Changes</a>
         </div>
       </aside>
 
       <article class="legal-content" id="de">
 
         <div class="info-box">
-          <p><strong>Kurzfassung:</strong> Wir speichern nur, was für den Betrieb der App notwendig ist. Deine Gebete und Gespräche gehören dir. Deine Daten liegen auf EU-Servern in Frankfurt. Kein Tracking, keine Werbung.</p>
+          <p><strong>Kurzfassung:</strong> Wir speichern nur, was für den Betrieb der App notwendig ist. Deine Gebete und Gespräche gehören dir. Deine App-Daten liegen auf EU-Servern in Frankfurt. Kein Tracking, keine Werbung. Gebete und Gespräche mit Elihu können Angaben zu deinem Glauben enthalten (besondere Kategorie nach Art. 9 DSGVO). Dafür holen wir vor der Nutzung deine ausdrückliche Einwilligung ein.</p>
         </div>
 
         <h2 id="de-1">1. Verantwortliche Stelle</h2>
+
         <p>Verantwortlich im Sinne der DSGVO (Art. 4 Nr. 7 DSGVO) ist:</p>
-        <p><strong>Lais Brandmähl</strong><br>
+
+        <p><strong>Lais Brandmähl</strong>, vertreten durch seine gesetzliche Vertreterin <strong>Ramona Brandmähl</strong><br>
         Dellenberg 5<br>
         24235 Laboe, Deutschland<br>
         E-Mail: <a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
 
-        <h2 id="de-2">2. Welche Daten wir erheben</h2>
+        <h2 id="de-2">2. Welche Daten wir verarbeiten</h2>
+
         <h3>2.1 Konto- und Profildaten</h3>
+
         <ul>
-          <li>E-Mail-Adresse (für Registrierung und Login)</li>
-          <li>Anzeigename (optional, frei gewählt)</li>
-          <li>Spracheinstellung (Deutsch / Englisch)</li>
+          <li><span>E-Mail-Adresse und Benutzername (Pflichtangaben bei der Registrierung)</span></li>
+          <li><span>Passwort (wird nur als Hash gespeichert, nie im Klartext)</span></li>
+          <li><span>Region/Zeitzone und Spracheinstellung (für Erinnerungen und die richtigen Hilfenummern)</span></li>
+          <li><span>Zeitpunkte deiner Zustimmungen: Nutzungsbedingungen und Datenschutz, ausdrückliche Einwilligung nach Art. 9 DSGVO, Bestätigung des Mindestalters von 16 Jahren</span></li>
+          <li><span>Wenn du dich mit Google anmeldest: E-Mail-Adresse und Name (und ggf. Profilbild) aus deinem Google-Konto</span></li>
+          <li><span>Optional: Zwei-Faktor-Authentifizierung (der Faktor wird bei Supabase gespeichert)</span></li>
         </ul>
+
         <h3>2.2 Von dir erstellte Inhalte</h3>
-        <ul>
-          <li><strong>Gebete:</strong> Texte, die du im Gebetsjournal speicherst</li>
-          <li><strong>Elihu-Gespräche:</strong> deine Nachrichten und Antworten des KI-Begleiters</li>
-          <li><strong>Community-Nachrichten:</strong> Beiträge in öffentlichen Chaträumen</li>
-        </ul>
-        <h3>2.3 Nutzungsdaten</h3>
-        <ul>
-          <li>Streak-Daten (Anzahl aufeinanderfolgender Nutzungstage)</li>
-          <li>Bibelmarkierungen (lokal auf deinem Gerät gespeichert)</li>
-          <li>App-Einstellungen (lokal auf deinem Gerät gespeichert)</li>
-        </ul>
-        <h3>2.4 Zahlungsdaten (Premium)</h3>
-        <p>Zahlungen werden ausschließlich über RevenueCat und Google Play abgewickelt. Wir sehen keine Kreditkarten- oder Bankdaten. RevenueCat erhält lediglich eine anonymisierte Nutzer-ID zur Verifizierung des Abonnementstatus.</p>
 
-        <h2 id="de-3">3. Zweck der Datenverarbeitung</h2>
         <ul>
-          <li>Bereitstellung und Betrieb aller App-Funktionen</li>
-          <li>Authentifizierung und Kontosicherheit</li>
-          <li>Verbesserung der App auf Basis aggregierter, anonymisierter Auswertung</li>
-          <li>Abwicklung von Premium-Abonnements</li>
+          <li><span><strong>Gebete:</strong> Texte, die du im Gebetsjournal speicherst</span></li>
+          <li><span><strong>Elihu-Gespräche:</strong> deine Nachrichten, die Antworten des KI-Begleiters und der Titel des Gesprächs</span></li>
+          <li><span><strong>Community:</strong> deine Nachrichten, Reaktionen, Raum-Mitgliedschaften und von dir erstellte Räume (öffentliche Räume sind für alle Nutzer sichtbar)</span></li>
+          <li><span>Streak-Daten (aufeinanderfolgende Nutzungstage) und Stimmungseinträge</span></li>
+          <li><span><strong>Blockierte Nutzer:</strong> wenn du jemanden blockierst, speichern wir die Konto-ID dieser Person und den Namen, wie du ihn im Chat gesehen hast. Nur du kannst deine Liste sehen und ändern. Sie wird beim Löschen deines Kontos entfernt.</span></li>
         </ul>
-        <p>Rechtsgrundlage ist <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (Vertragserfüllung) sowie <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse am sicheren Betrieb der App).</p>
 
-        <h2 id="de-4">4. Drittanbieter und Datenübermittlung</h2>
+        <h3>2.3 Technische Daten und Sicherheit</h3>
+
+        <ul>
+          <li><span><strong>Nutzungszähler:</strong> wie viele Elihu-Nachrichten du pro Tag gesendet hast (für die Tageslimits)</span></li>
+          <li><span><strong>Status:</strong> Premium-Status und ggf. eine Community-Sperre</span></li>
+          <li><span><strong>Fehlerprotokolle:</strong> bei Abstürzen und technischen Fehlern speichert die App die Fehlermeldung, technische Details, den Kontext, eine Sitzungs-ID und deine Konto-ID, damit wir Fehler beheben können</span></li>
+          <li><span><strong>Fehlermeldungen von dir:</strong> Wenn du in der App einen Fehler meldest, erhalten wir deine Beschreibung, deine E-Mail-Adresse, die App-Version, Geräteinformationen und optional einen Screenshot</span></li>
+          <li><span><strong>Meldungen von Community-Inhalten:</strong> die gemeldete Nachricht, der Grund, der Raum sowie die Kennungen der beteiligten Konten</span></li>
+          <li><span>Beim Aufruf unserer Server fallen technisch bedingt kurzzeitig Verbindungsdaten (z. B. IP-Adresse, Zeitpunkt) in Protokollen an</span></li>
+        </ul>
+
+        <h3>2.4 Nur auf deinem Gerät gespeichert</h3>
+
+        <p>Bibelmarkierungen, Notizen, App-Einstellungen, die Erinnerungs-Uhrzeit und Daten des Homescreen-Widgets bleiben lokal auf deinem Gerät.</p>
+
+        <h3>2.5 Zahlungsdaten (Premium)</h3>
+
+        <p>Zahlungen laufen ausschließlich über Google Play. Wir sehen keine Kreditkarten- oder Bankdaten. RevenueCat erhält zur Verwaltung des Abonnements deine pseudonyme Konto-ID und den Abo-Status.</p>
+
+        <h3>2.6 Diese Website</h3>
+
+        <p>Beim Aufruf dieser Website verarbeitet unser Hosting-Anbieter Vercel technisch notwendige Server-Protokolle (IP-Adresse, Zeitpunkt, aufgerufene Seite, Browser und Betriebssystem). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer und stabiler Betrieb). Wir setzen keine Cookies, keine Analyse- und keine Werbe-Tools ein. Schriften werden von unserem eigenen Server geladen.</p>
+
+        <h2 id="de-3">3. Zwecke und Rechtsgrundlagen</h2>
+
+        <ul>
+          <li><span><strong>Konto und App-Funktionen bereitstellen</strong> (Registrierung, Gebete, Community, Streaks): Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</span></li>
+          <li><span><strong>Glaubens- und ggf. Gesundheitsangaben</strong> in Gebeten und Elihu-Gesprächen (besondere Kategorien): deine <strong>ausdrückliche Einwilligung</strong> nach Art. 9 Abs. 2 lit. a DSGVO, die du bei der Registrierung bzw. beim ersten Start erteilst. Du kannst sie jederzeit mit Wirkung für die Zukunft widerrufen (siehe Abschnitt 7). Ohne Einwilligung kann die App nicht genutzt werden.</span></li>
+          <li><span><strong>Premium-Abo abwickeln:</strong> Art. 6 Abs. 1 lit. b DSGVO; gesetzliche Aufbewahrungspflichten: Art. 6 Abs. 1 lit. c DSGVO</span></li>
+          <li><span><strong>Sicherheit, Missbrauchsschutz, Fehleranalyse und Moderation</strong> (Tageslimits, Fehlerprotokolle, Meldungen): Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</span></li>
+          <li><span><strong>Nachweis deiner Zustimmungen</strong> (Zeitstempel): Art. 6 Abs. 1 lit. c und f DSGVO</span></li>
+        </ul>
+
+        <h2 id="de-4">4. Künstliche Intelligenz (Elihu)</h2>
+
+        <p>Elihu ist ein KI-Begleiter. Wenn du Elihu schreibst, werden deine Nachrichten (aus Gründen der Kosten und Datenminimierung nur die letzten Nachrichten des Gesprächs) an unseren Server und von dort an <strong>Mistral AI</strong> (Frankreich) gesendet, um eine Antwort zu erzeugen. Der Titel eines Gesprächs wird aus deiner ersten Nachricht erzeugt. Für die tägliche Andacht wird nur ein Bibelvers verwendet, keine persönlichen Daten.</p>
+
+        <ul>
+          <li><span>Elihu trifft keine Entscheidungen mit rechtlicher Wirkung über dich.</span></li>
+          <li><span>Antworten können falsch sein. Elihu ersetzt keine Seelsorge, Therapie, ärztliche Hilfe oder Notfallhilfe.</span></li>
+          <li><span>Bitte schreibe in Gesprächen mit Elihu möglichst <strong>keine Namen oder Gesundheitsdaten anderer Personen</strong>.</span></li>
+          <li><span>Damit wir in Krisen schneller helfen können, wird jede Nachricht an Elihu zusätzlich automatisch mit der Moderations-Schnittstelle von Mistral AI auf Hinweise auf Selbstgefährdung geprüft (rein automatisiert, ohne menschliche Prüfung) und mit einer Liste von Warnwörtern abgeglichen. Erkennt das System eine mögliche Krise, zeigt Elihu Hilfenummern deines Landes an. Dafür wird die Zeitzone aus deinen Einstellungen oder die deines Geräts genutzt.</span></li>
+          <li><span>Im Elihu-Bildschirm gibt es außerdem einen <strong>Hilfe-Knopf</strong>, der jederzeit Hilfenummern und den Notruf anzeigt, auch wenn dein Tageslimit erreicht ist. Die Nummern sind in der App gespeichert; für das Anzeigen werden keine Daten an uns übertragen.</span></li>
+          <li><span>Die Hintergrundbilder in der App (Gemälde) wurden mit Hilfe von künstlicher Intelligenz erzeugt und sind entsprechend gekennzeichnet.</span></li>
+        </ul>
+
+        <h2 id="de-5">5. Dienstleister und Datenübermittlung</h2>
+
+        <p>Mit unseren Auftragsverarbeitern (Supabase, Mistral AI, RevenueCat, Resend, Vercel) bestehen Verträge zur Auftragsverarbeitung. Google verarbeitet Daten in eigener Verantwortung. Bei Übermittlungen in die USA stützen wir uns auf geeignete Garantien (Standardvertragsklauseln der EU-Kommission bzw. das EU-US Data Privacy Framework, soweit der Anbieter zertifiziert ist).</p>
+
         <div class="tp-grid">
           <div class="tp-card">
             <h4>Supabase</h4>
-            <p>Datenbank &amp; Authentifizierung · EU-Server Frankfurt · ISO 27001 · SOC 2 Type II</p>
+            <p>Datenbank, Anmeldung, Server-Funktionen und Speicher für Screenshots · EU-Server Frankfurt · Auftragsverarbeiter</p>
             <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Datenschutz →</a>
           </div>
           <div class="tp-card">
             <h4>Mistral AI</h4>
-            <p>KI-Verarbeitung für Elihu · Frankreich (EU) · Verarbeitung über die API, nicht über die Consumer-Oberfläche „Le Chat" · Speicherdauer und Trainingsnutzung richten sich nach dem gebuchten API-Tarif</p>
+            <p>KI-Verarbeitung und Moderations-Prüfung für Elihu · Frankreich (EU) · Verarbeitung über die API (nicht über die Consumer-Oberfläche „Le Chat“) als Auftragsverarbeiter</p>
             <a href="https://legal.mistral.ai/terms/privacy-policy" target="_blank" rel="noopener">Datenschutz →</a>
           </div>
           <div class="tp-card">
             <h4>RevenueCat</h4>
-            <p>Abo-Verwaltung · USA · Nur anonymisierte Nutzer-ID · Keine Zahlungsdaten</p>
+            <p>Abo-Verwaltung · USA · Konto-ID und Abo-Status, keine Zahlungsdaten</p>
             <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Datenschutz →</a>
           </div>
           <div class="tp-card">
-            <h4>Google Play</h4>
-            <p>Download &amp; Zahlung · Unterliegt Googles eigenen Datenschutzbedingungen</p>
+            <h4>Google</h4>
+            <p><strong>Google Play</strong>: Download und Zahlung. <strong>Anmeldung mit Google</strong> (freiwillig): Google erfährt, dass du dich bei Ruah anmeldest. Es gelten Googles Datenschutzbedingungen.</p>
             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutz →</a>
           </div>
           <div class="tp-card">
             <h4>Resend</h4>
-            <p>Versand von Moderations-Benachrichtigungen · USA (DPF-zertifiziert) · Nur bei gemeldeten Community-Inhalten: E-Mail-Adresse des gemeldeten Nutzers wird zur Bearbeitung der Meldung an uns übermittelt</p>
+            <p>Versand interner E-Mails an uns (bei Fehlermeldungen und gemeldeten Community-Inhalten) · USA (DPF-zertifiziert) · Übermittelt werden dabei u. a. die E-Mail-Adresse der meldenden bzw. gemeldeten Person</p>
             <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Datenschutz →</a>
+          </div>
+          <div class="tp-card">
+            <h4>Vercel</h4>
+            <p>Hosting dieser Website · USA (DPF-zertifiziert, zusätzlich Standardvertragsklauseln)</p>
+            <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Datenschutz →</a>
           </div>
         </div>
 
-        <h2 id="de-5">5. Datenspeicherung und Löschung</h2>
-        <p>Wir speichern deine Daten, solange dein Account aktiv ist. Du kannst jederzeit in der App unter <strong>Einstellungen → Account löschen</strong> alle deine Daten unwiderruflich löschen. Dabei werden gelöscht:</p>
+        <h2 id="de-6">6. Speicherung und Löschung</h2>
+
+        <p>Wir speichern deine Daten, solange dein Konto besteht. Du kannst dein Konto jederzeit in der App unter Konto → Account löschen. Dabei werden unwiderruflich gelöscht:</p>
+
         <ul>
-          <li>Alle Gebete und Gebetseinträge</li>
-          <li>Alle Elihu-Gespräche und Gesprächsverläufe</li>
-          <li>Streaks und Nutzungsdaten</li>
-          <li>Profil, Anzeigename und E-Mail-Adresse</li>
+          <li><span>alle Gebete und Gebetseinträge</span></li>
+          <li><span>alle Elihu-Gespräche und Verläufe</span></li>
+          <li><span>deine Community-Nachrichten, Reaktionen und Raum-Mitgliedschaften</span></li>
+          <li><span>Streaks, Stimmungseinträge und Nutzungszähler</span></li>
+          <li><span>Fehlerprotokolle und von dir eingereichte Fehlermeldungen (inkl. Screenshots)</span></li>
+          <li><span>Profil, Benutzername, E-Mail-Adresse und dein Login-Konto</span></li>
         </ul>
 
-        <h2 id="de-6">6. Deine Rechte (DSGVO)</h2>
+        <p><strong>Was bleibt:</strong> Von dir erstellte Räume bleiben ohne Ersteller bestehen (bitte schreibe in Raumnamen und Beschreibungen keine personenbezogenen Daten). Meldungen über Community-Inhalte, die zur Aufklärung von Verstößen angelegt wurden, können mit dem damals angezeigten Namen weiter gespeichert sein. Wir löschen sie, sobald der Vorgang geklärt ist. E-Mails zu Fehlermeldungen löschen wir nach der Bearbeitung. Zahlungsbelege liegen beim Zahlungsabwickler (Google) und unterliegen dessen gesetzlichen Aufbewahrungsfristen. Server-Protokolle werden nur kurzzeitig vorgehalten.</p>
+
+        <h2 id="de-7">7. Deine Rechte (DSGVO)</h2>
+
         <ul>
-          <li><strong>Auskunft (Art. 15 DSGVO):</strong> Du kannst erfragen, welche Daten wir von dir gespeichert haben.</li>
-          <li><strong>Berichtigung (Art. 16 DSGVO):</strong> Du kannst die Korrektur unrichtiger Daten verlangen.</li>
-          <li><strong>Löschung (Art. 17 DSGVO):</strong> Du kannst die Löschung deiner Daten verlangen — oder direkt in der App löschen.</li>
-          <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Du kannst eine Kopie deiner Daten in einem gängigen Format anfordern.</li>
-          <li><strong>Widerspruch (Art. 21 DSGVO):</strong> Du kannst der Verarbeitung deiner Daten widersprechen.</li>
-          <li><strong>Beschwerde:</strong> Du hast das Recht, dich bei der zuständigen Datenschutzbehörde (z. B. dem LfDI deines Bundeslandes) zu beschweren.</li>
+          <li><span><strong>Auskunft</strong> (Art. 15 DSGVO) und <strong>Berichtigung</strong> (Art. 16 DSGVO)</span></li>
+          <li><span><strong>Löschung</strong> (Art. 17 DSGVO): in der App oder per E-Mail</span></li>
+          <li><span><strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</span></li>
+          <li><span><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO): wir stellen dir deine Daten auf Anfrage in einem gängigen Format bereit</span></li>
+          <li><span><strong>Widerspruch</strong> gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO)</span></li>
+          <li><span><strong>Widerruf deiner Einwilligung</strong> (Art. 7 Abs. 3 DSGVO) jederzeit mit Wirkung für die Zukunft, z. B. durch Löschen deines Kontos oder per E-Mail. Die Rechtmäßigkeit der bisherigen Verarbeitung bleibt unberührt.</span></li>
+          <li><span><strong>Beschwerde</strong> bei einer Aufsichtsbehörde (Art. 77 DSGVO). Für uns zuständig: Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein (ULD), Holstenstraße 98, 24103 Kiel, <a href="https://www.datenschutzzentrum.de" target="_blank" rel="noopener">datenschutzzentrum.de</a>. Du kannst dich auch an die Behörde an deinem Wohnort wenden.</span></li>
         </ul>
-        <p>Für alle Anfragen: <a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
 
-        <h2 id="de-7">7. Sicherheit</h2>
-        <p>Alle Daten werden verschlüsselt übertragen (TLS 1.2 / HTTPS). Supabase verwendet <strong>Row-Level Security (RLS)</strong>, sodass kein Nutzer die Daten eines anderen einsehen kann. Passwörter werden gehasht und niemals im Klartext gespeichert.</p>
+        <p>Für alle Anfragen: <a href="mailto:ruah.info@web.de">ruah.info@web.de</a>. Wir antworten in der Regel innerhalb eines Monats.</p>
 
-        <h2 id="de-8">8. Kinder</h2>
-        <p>Ruah richtet sich an Personen ab <strong>13 Jahren</strong>. Wir erheben wissentlich keine Daten von Kindern unter 13 Jahren. Falls du als Erziehungsberechtigter feststellst, dass ein Kind unter 13 Jahren einen Account erstellt hat, wende dich bitte an <a href="mailto:ruah.info@web.de">ruah.info@web.de</a> — wir löschen den Account umgehend.</p>
+        <h2 id="de-8">8. Sicherheit</h2>
 
-        <h2 id="de-9">9. Änderungen dieser Erklärung</h2>
-        <p>Wir können diese Datenschutzerklärung gelegentlich aktualisieren. Bei wesentlichen Änderungen informieren wir dich innerhalb der App mit einem Hinweis. Das Datum der letzten Änderung steht oben auf dieser Seite.</p>
+        <p>Alle Daten werden verschlüsselt übertragen (TLS/HTTPS). Die Datenbank nutzt Row-Level Security: Nutzer können nur ihre eigenen Daten bzw. die für sie freigegebenen Community-Inhalte sehen. Passwörter werden gehasht gespeichert. Du kannst zusätzlich eine Zwei-Faktor-Authentifizierung einrichten. Absolute Sicherheit gibt es nicht. Bitte wähle ein starkes, einmaliges Passwort. Sicherheitslücken melde bitte laut Impressum.</p>
 
-        <!-- ENGLISH -->
+        <h2 id="de-9">9. Mindestalter</h2>
+
+        <p>Ruah ist für Personen ab <strong>16 Jahren</strong>. Bei der Registrierung bzw. beim ersten Start bestätigst du dein Alter. Wir verarbeiten wissentlich keine Daten von Personen unter 16 Jahren. Falls du als Erziehungsberechtigte(r) feststellst, dass eine Person unter 16 ein Konto erstellt hat, schreibe bitte an <a href="mailto:ruah.info@web.de">ruah.info@web.de</a>. Wir löschen das Konto umgehend.</p>
+
+        <h2 id="de-10">10. Änderungen dieser Erklärung</h2>
+
+        <p>Wir aktualisieren diese Datenschutzerklärung, wenn sich die App oder die Rechtslage ändert. Bei wesentlichen Änderungen informieren wir dich in der App. Das Datum der letzten Änderung steht oben auf dieser Seite.</p>
+
         <div class="lang-section" id="en">
           <div class="lang-divider"><span>🇬🇧 English Version</span></div>
 
           <div class="info-box">
-            <p><strong>Summary:</strong> We only store what is necessary to operate the app. Your prayers and conversations belong to you. Data is stored on EU servers in Frankfurt. No tracking, no advertising.</p>
+            <p><strong>Summary:</strong> We only store what is necessary to operate the app. Your prayers and conversations belong to you. Your app data is stored on EU servers in Frankfurt. No tracking, no advertising. Prayers and conversations with Elihu may reveal your faith (a special category under Art. 9 GDPR). We ask for your explicit consent before you use the app.</p>
           </div>
 
           <h2 id="en-1">1. Controller</h2>
+
           <p>The controller within the meaning of the GDPR (Art. 4 No. 7 GDPR) is:</p>
-          <p><strong>Lais Brandmähl</strong><br>
+
+          <p><strong>Lais Brandmähl</strong>, represented by his legal representative <strong>Ramona Brandmähl</strong><br>
           Dellenberg 5<br>
           24235 Laboe, Germany<br>
           Email: <a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
 
-          <h2 id="en-2">2. Data We Collect</h2>
-          <h3>2.1 Account &amp; Profile Data</h3>
-          <ul>
-            <li>Email address (for registration and login)</li>
-            <li>Display name (optional, freely chosen)</li>
-            <li>Language preference (German / English)</li>
-          </ul>
-          <h3>2.2 User-Generated Content</h3>
-          <ul>
-            <li><strong>Prayers:</strong> Texts you save in the prayer journal</li>
-            <li><strong>Elihu conversations:</strong> Your messages and the AI companion's responses</li>
-            <li><strong>Community messages:</strong> Posts in public chat rooms</li>
-          </ul>
-          <h3>2.3 Usage Data</h3>
-          <ul>
-            <li>Streak data (number of consecutive days of use)</li>
-            <li>Bible highlights (stored locally on your device)</li>
-            <li>App settings (stored locally on your device)</li>
-          </ul>
-          <h3>2.4 Payment Data (Premium)</h3>
-          <p>Payments are processed exclusively via RevenueCat and Google Play. We do not see credit card or bank details. RevenueCat only receives an anonymized user ID to verify subscription status.</p>
+          <h2 id="en-2">2. Data We Process</h2>
 
-          <h2 id="en-3">3. Purpose of Processing</h2>
-          <ul>
-            <li>Providing and operating all app features</li>
-            <li>Authentication and account security</li>
-            <li>App improvement based on aggregated, anonymized analysis</li>
-            <li>Processing premium subscriptions</li>
-          </ul>
-          <p>Legal basis is <strong>Art. 6(1)(b) GDPR</strong> (contract performance) and <strong>Art. 6(1)(f) GDPR</strong> (legitimate interest in the secure operation of the app).</p>
+          <h3>2.1 Account &amp; profile data</h3>
 
-          <h2 id="en-4">4. Third Parties &amp; Data Transfers</h2>
+          <ul>
+            <li><span>Email address and username (required for registration)</span></li>
+            <li><span>Password (stored only as a hash, never in plain text)</span></li>
+            <li><span>Region/time zone and language setting (for reminders and the correct helpline numbers)</span></li>
+            <li><span>Timestamps of your consents: Terms and Privacy, explicit consent under Art. 9 GDPR, confirmation of the minimum age of 16</span></li>
+            <li><span>If you sign in with Google: email address and name (and possibly profile picture) from your Google account</span></li>
+            <li><span>Optional: two-factor authentication (the factor is stored at Supabase)</span></li>
+          </ul>
+
+          <h3>2.2 Content you create</h3>
+
+          <ul>
+            <li><span><strong>Prayers:</strong> text you save in the prayer journal</span></li>
+            <li><span><strong>Elihu conversations:</strong> your messages, the AI companion’s replies and the conversation title</span></li>
+            <li><span><strong>Community:</strong> your messages, reactions, room memberships and rooms you create (public rooms are visible to all users)</span></li>
+            <li><span>Streak data (consecutive days of use) and mood entries</span></li>
+            <li><span><strong>Blocked users:</strong> when you block someone, we store that person’s account ID and the name as you saw it in the chat. Only you can see and change your list. It is removed when you delete your account.</span></li>
+          </ul>
+
+          <h3>2.3 Technical data &amp; security</h3>
+
+          <ul>
+            <li><span><strong>Usage counters:</strong> how many Elihu messages you sent per day (for the daily limits)</span></li>
+            <li><span><strong>Status:</strong> premium status and, if applicable, a community ban</span></li>
+            <li><span><strong>Error logs:</strong> on crashes and technical errors the app stores the error message, technical details, context, a session ID and your account ID so we can fix problems</span></li>
+            <li><span><strong>Reports from you:</strong> if you report a problem in the app, we receive your description, your email address, the app version, device information and optionally a screenshot</span></li>
+            <li><span><strong>Reports about community content:</strong> the reported message, the reason, the room and the IDs of the accounts involved</span></li>
+            <li><span>When you contact our servers, connection data (e.g. IP address, time) is briefly recorded in technical logs</span></li>
+          </ul>
+
+          <h3>2.4 Stored only on your device</h3>
+
+          <p>Bible highlights, notes, app settings, the reminder time and home-screen widget data stay locally on your device.</p>
+
+          <h3>2.5 Payment data (Premium)</h3>
+
+          <p>Payments are processed exclusively through Google Play. We never see credit card or bank details. RevenueCat receives your pseudonymous account ID and subscription status to manage the subscription.</p>
+
+          <h3>2.6 This website</h3>
+
+          <p>When you visit this website, our hosting provider Vercel processes technically necessary server logs (IP address, time, page requested, browser and operating system). Legal basis: Art. 6(1)(f) GDPR (secure and stable operation). We use no cookies, no analytics and no advertising tools. Fonts are loaded from our own server.</p>
+
+          <h2 id="en-3">3. Purposes &amp; Legal Bases</h2>
+
+          <ul>
+            <li><span><strong>Providing your account and the app features</strong> (registration, prayers, community, streaks): Art. 6(1)(b) GDPR (contract)</span></li>
+            <li><span><strong>Faith and possibly health information</strong> in prayers and Elihu conversations (special categories): your <strong>explicit consent</strong> under Art. 9(2)(a) GDPR, given at registration or at first launch. You can withdraw it at any time with effect for the future (see section 7). Without consent the app cannot be used.</span></li>
+            <li><span><strong>Handling the Premium subscription:</strong> Art. 6(1)(b) GDPR; statutory retention duties: Art. 6(1)(c) GDPR</span></li>
+            <li><span><strong>Security, abuse prevention, error analysis and moderation</strong> (daily limits, error logs, reports): Art. 6(1)(f) GDPR (legitimate interest)</span></li>
+            <li><span><strong>Proof of your consents</strong> (timestamps): Art. 6(1)(c) and (f) GDPR</span></li>
+          </ul>
+
+          <h2 id="en-4">4. Artificial Intelligence (Elihu)</h2>
+
+          <p>Elihu is an AI companion. When you write to Elihu, your messages (only the most recent messages of the conversation, for cost and data-minimisation reasons) are sent to our server and from there to <strong>Mistral AI</strong> (France) to generate a reply. A conversation title is generated from your first message. The daily devotion uses only a Bible verse, no personal data.</p>
+
+          <ul>
+            <li><span>Elihu makes no decisions about you with legal effect.</span></li>
+            <li><span>Replies can be wrong. Elihu does not replace pastoral care, therapy, medical help or emergency services.</span></li>
+            <li><span>Please avoid writing <strong>names or health data of other people</strong> in conversations with Elihu.</span></li>
+            <li><span>So that we can help faster in a crisis, every message to Elihu is additionally checked automatically for signs of self-harm using Mistral AI's moderation interface (fully automated, no human review) and matched against a list of warning words. If the system detects a possible crisis, Elihu shows helpline numbers for your country. For this it uses the time zone from your settings or from your device.</span></li>
+            <li><span>The Elihu screen also has a <strong>help button</strong> that shows helpline numbers and the emergency number at any time, even when your daily limit has been reached. The numbers are stored in the app; no data is sent to us to display them.</span></li>
+            <li><span>The background images in the app (paintings) were created with the help of artificial intelligence and are labelled accordingly.</span></li>
+          </ul>
+
+          <h2 id="en-5">5. Service Providers &amp; Data Transfers</h2>
+
+          <p>We have data processing agreements with our processors (Supabase, Mistral AI, RevenueCat, Resend, Vercel). Google processes data under its own responsibility. For transfers to the USA we rely on appropriate safeguards (EU Standard Contractual Clauses or the EU-US Data Privacy Framework where the provider is certified).</p>
+
           <div class="tp-grid">
             <div class="tp-card">
               <h4>Supabase</h4>
-              <p>Database &amp; Auth · EU Frankfurt · ISO 27001 · SOC 2 Type II</p>
-              <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy Policy →</a>
+              <p>Database, sign-in, server functions and storage for screenshots · EU servers in Frankfurt · processor</p>
+              <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy policy →</a>
             </div>
             <div class="tp-card">
               <h4>Mistral AI</h4>
-              <p>AI processing for Elihu · France (EU) · Processed via the API, not the "Le Chat" consumer interface · Retention and training use depend on the API plan tier in use</p>
-              <a href="https://legal.mistral.ai/terms/privacy-policy" target="_blank" rel="noopener">Privacy Policy →</a>
+              <p>AI processing for Elihu · France (EU) · processed via the API (not the “Le Chat” consumer interface) as a processor</p>
+              <a href="https://legal.mistral.ai/terms/privacy-policy" target="_blank" rel="noopener">Privacy policy →</a>
             </div>
             <div class="tp-card">
               <h4>RevenueCat</h4>
-              <p>Subscription management · USA · Anonymized ID only · No payment data</p>
-              <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy →</a>
+              <p>Subscription management · USA · account ID and subscription status, no payment data</p>
+              <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy policy →</a>
             </div>
             <div class="tp-card">
-              <h4>Google Play</h4>
-              <p>Download &amp; Payment · Subject to Google's own privacy policy</p>
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy →</a>
+              <h4>Google</h4>
+              <p><strong>Google Play</strong>: download and payment. <strong>Sign in with Google</strong> (optional): Google learns that you sign in to Ruah. Google’s privacy terms apply.</p>
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy →</a>
             </div>
             <div class="tp-card">
               <h4>Resend</h4>
-              <p>Sends moderation notifications · USA (DPF-certified) · Only for reported community content: the reported user's email address is transmitted to us to process the report</p>
-              <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy →</a>
+              <p>Sending internal emails to us (for problem reports and reported community content) · USA (DPF-certified) · this includes the email address of the reporting or reported person</p>
+              <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy policy →</a>
+            </div>
+            <div class="tp-card">
+              <h4>Vercel</h4>
+              <p>Hosting of this website · USA (DPF-certified, plus Standard Contractual Clauses)</p>
+              <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy policy →</a>
             </div>
           </div>
 
-          <h2 id="en-5">5. Data Retention &amp; Deletion</h2>
-          <p>We store your data as long as your account is active. You can permanently and irrevocably delete all your data at any time under <strong>Settings → Delete Account</strong>. This will delete:</p>
+          <h2 id="en-6">6. Retention &amp; Deletion</h2>
+
+          <p>We store your data as long as your account exists. You can delete your account at any time in the app under Account → Delete account. This permanently deletes:</p>
+
           <ul>
-            <li>All prayers and prayer entries</li>
-            <li>All Elihu conversations and conversation histories</li>
-            <li>Streaks and usage data</li>
-            <li>Profile, display name and email address</li>
+            <li><span>all prayers and prayer entries</span></li>
+            <li><span>all Elihu conversations and histories</span></li>
+            <li><span>your community messages, reactions and room memberships</span></li>
+            <li><span>streaks, mood entries and usage counters</span></li>
+            <li><span>error logs and problem reports you submitted (incl. screenshots)</span></li>
+            <li><span>profile, username, email address and your login account</span></li>
           </ul>
 
-          <h2 id="en-6">6. Your Rights (GDPR)</h2>
+          <p><strong>What remains:</strong> Rooms you created remain without a creator (please do not put personal data in room names or descriptions). Reports about community content created to investigate violations may remain stored with the name displayed at the time; we delete them once the matter is resolved. Emails about problem reports are deleted after processing. Payment records are held by the payment processor (Google) and are subject to its statutory retention periods. Server logs are kept only briefly.</p>
+
+          <h2 id="en-7">7. Your Rights (GDPR)</h2>
+
           <ul>
-            <li><strong>Access (Art. 15 GDPR):</strong> You may request what data we hold about you.</li>
-            <li><strong>Rectification (Art. 16 GDPR):</strong> You may request correction of inaccurate data.</li>
-            <li><strong>Erasure (Art. 17 GDPR):</strong> You may request deletion — or delete directly in the app.</li>
-            <li><strong>Data portability (Art. 20 GDPR):</strong> You may request a copy of your data in a common format.</li>
-            <li><strong>Objection (Art. 21 GDPR):</strong> You may object to the processing of your data.</li>
-            <li><strong>Complaint:</strong> You have the right to lodge a complaint with the competent supervisory authority.</li>
+            <li><span><strong>Access</strong> (Art. 15 GDPR) and <strong>rectification</strong> (Art. 16 GDPR)</span></li>
+            <li><span><strong>Erasure</strong> (Art. 17 GDPR): in the app or by email</span></li>
+            <li><span><strong>Restriction of processing</strong> (Art. 18 GDPR)</span></li>
+            <li><span><strong>Data portability</strong> (Art. 20 GDPR): on request we provide your data in a common format</span></li>
+            <li><span><strong>Objection</strong> to processing based on legitimate interests (Art. 21 GDPR)</span></li>
+            <li><span><strong>Withdrawal of consent</strong> (Art. 7(3) GDPR) at any time with effect for the future, e.g. by deleting your account or by email. Processing carried out before withdrawal remains lawful.</span></li>
+            <li><span><strong>Complaint</strong> to a supervisory authority (Art. 77 GDPR). Competent for us: Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein (ULD), Holstenstraße 98, 24103 Kiel, Germany, <a href="https://www.datenschutzzentrum.de" target="_blank" rel="noopener">datenschutzzentrum.de</a>. You may also contact the authority where you live.</span></li>
           </ul>
-          <p>For all requests: <a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
 
-          <h2 id="en-7">7. Security</h2>
-          <p>All data is transmitted encrypted (TLS 1.2 / HTTPS). Supabase uses <strong>Row-Level Security (RLS)</strong>, ensuring no user can access another user's data. Passwords are hashed and never stored in plaintext.</p>
+          <p>For all requests: <a href="mailto:ruah.info@web.de">ruah.info@web.de</a>. We usually reply within one month.</p>
 
-          <h2 id="en-8">8. Children</h2>
-          <p>Ruah is intended for persons aged <strong>13 and above</strong>. We do not knowingly collect data from children under 13. If you are a parent or guardian and believe a child under 13 has created an account, please contact <a href="mailto:ruah.info@web.de">ruah.info@web.de</a> — we will delete the account immediately.</p>
+          <h2 id="en-8">8. Security</h2>
 
-          <h2 id="en-9">9. Changes to This Policy</h2>
-          <p>We may update this Privacy Policy from time to time. For significant changes, we will notify you within the app. The date of the last update is shown at the top of this page.</p>
+          <p>All data is transmitted encrypted (TLS/HTTPS). The database uses row-level security: users can only see their own data and the community content released to them. Passwords are stored hashed. You can also set up two-factor authentication. There is no absolute security; please choose a strong, unique password. Please report security issues as described in the legal notice.</p>
+
+          <h2 id="en-9">9. Minimum Age</h2>
+
+          <p>Ruah is for people aged <strong>16 and over</strong>. You confirm your age at registration or on first launch. We do not knowingly process data of people under 16. If you are a parent or guardian and notice that someone under 16 has created an account, please write to <a href="mailto:ruah.info@web.de">ruah.info@web.de</a>. We will delete the account immediately.</p>
+
+          <h2 id="en-10">10. Changes to this Policy</h2>
+
+          <p>We update this Privacy Policy when the app or the legal situation changes. For significant changes we will notify you in the app. The date of the last update is shown at the top of this page.</p>
         </div>
 
         <a href="index.html" class="back-link">
@@ -304,14 +425,11 @@
         <a href="index.html#features">Features</a>
         <a href="index.html#elihu">Elihu</a>
         <a href="index.html#premium">Premium</a>
-        <a href="https://play.google.com/store/apps/details?id=com.laisbrandmaehl.ruah" target="_blank" rel="noopener">Google Play ↗</a>
+        <a href="index.html#download">Coming Soon</a>
       </div>
       <div class="footer-col footer-contact">
-        <h4>Rechtliches &amp; Kontakt</h4>
-        <a href="imprint.html">Impressum</a>
-        <a href="privacy.html">Datenschutzerklärung</a>
-        <a href="terms.html">Nutzungsbedingungen</a>
-        <p style="margin-top:.8rem"><a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
+        <h4>Kontakt</h4>
+        <p><a href="mailto:ruah.info@web.de">ruah.info@web.de</a></p>
       </div>
     </div>
     <div class="footer-bottom">
