@@ -46,7 +46,16 @@
 
 /* ── RESET ──────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  /* FIX (19.11.2026): Die Einflug-Animationen ([data-a="left"] u.a.) schieben Elemente vor dem Einblenden bis zu 72px
+     ueber den rechten Rand. Nur body{overflow-x:hidden} reichte auf dem Handy nicht: der Browser machte die Seite
+     breiter (innerWidth 463 statt 412) und der Sprachumschalter in der Kopfzeile wurde rechts abgeschnitten.
+     'hidden' als Rueckfall fuer alte Browser, 'clip' ueberschreibt es in neuen. */
+  overflow-x: hidden;
+  overflow-x: clip;
+}
 body {
   background: var(--bg);
   color: var(--ink);
